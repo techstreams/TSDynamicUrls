@@ -1,6 +1,6 @@
 # TSDynamicUrls
 
-**TSDynamicUrls** is an [Apps Script](https://www.google.com/script/start/) powered dynamic URL generator for ***Google Docs***, ***Sheets***, ***Slides***, ***Drawings*** & ***Forms*** to assists their creators and consumers in leveraging the URL power of Google documents.
+**TSDynamicUrls** is an [Apps Script](https://www.google.com/script/start/) powered dynamic URL generator for ***Google Docs***, ***Sheets***, ***Slides***, ***Drawings*** & ***Forms*** to assists document creators and consumers in leveraging the [URL power](https://medium.com/@techstreams/google-document-urls-as-simple-machines-400baca6d014) of Google documents.
 
 See the following blog posts for more information and getting started guides:
 
