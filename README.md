@@ -5,7 +5,7 @@
 See the following blog posts for more information and getting started guides:
 
 * **[Introduction to the URL power of Google documents](https://medium.com/@techstreams/google-document-urls-as-simple-machines-400baca6d014)**
-* **[TSDynamicUrls for Google Forms]()** - *Also see post for more information on sharing Google Forms with __Copy__ or __Template__*
+* **[TSDynamicUrls for Google Forms]()**
 
 **TSDynamicUrls** is intended for internal use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
 
@@ -18,9 +18,9 @@ See the following blog posts for more information and getting started guides:
 | FORMAT | DOCS | SHEETS | SLIDES | DRAWINGS | FORMS|
 | ---- | :--: | :----: | :----: | :---: | :------: |
 | Preview |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |
-| Copy |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |
+| Copy |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: `**` |
 | Copy w/ Comments |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: | :heavy_minus_sign: |
-| Template |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |
+| Template |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: `**` |
 | PDF (Portable Document Format) |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: | :heavy_minus_sign: |
 | JPEG (Joint Photographic Experts Group Image) | :heavy_minus_sign: |  :heavy_minus_sign: |  :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: |
 | PNG (Portable Graphics Format Image) | :heavy_minus_sign: |  :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: |
@@ -38,6 +38,8 @@ See the following blog posts for more information and getting started guides:
 | TSV (Tab-separated values)  - Individual Sheet Only | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign:|
 | PPTX (Microsoft PowerPoint) | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: |
 | ODP (OpenDocument Presentation) | :heavy_minus_sign: | :heavy_minus_sign: |  :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: |
+
+`**` *See __[TSDynamicUrls for Google Forms]()__ for more information on sharing Google Forms*
 
 <br>
 
