@@ -15,6 +15,8 @@ See the following blog posts for more information and getting started guides:
 
 **Supported Google document file types & formats:**
 
+`*` *See __[TSDynamicUrls for Google Forms]()__ for more information on sharing Google Forms.*
+
 | FORMAT | DOCS | SHEETS | SLIDES | DRAWINGS | FORMS|
 | ---- | :--: | :----: | :----: | :---: | :------: |
 | Preview |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |
@@ -39,7 +41,6 @@ See the following blog posts for more information and getting started guides:
 | PPTX (Microsoft PowerPoint) | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: |
 | ODP (OpenDocument Presentation) | :heavy_minus_sign: | :heavy_minus_sign: |  :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: |
 
-`*` *See __[TSDynamicUrls for Google Forms]()__ for more information on sharing Google Forms*
 
 <br>
 
