@@ -18,9 +18,9 @@ See the following blog posts for more information and getting started guides:
 | FORMAT | DOCS | SHEETS | SLIDES | DRAWINGS | FORMS|
 | ---- | :--: | :----: | :----: | :---: | :------: |
 | Preview |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |
-| Copy |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: `**` |
+| Copy |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: `*` |
 | Copy w/ Comments |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: | :heavy_minus_sign: |
-| Template |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: `**` |
+| Template |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: `*` |
 | PDF (Portable Document Format) |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: | :heavy_minus_sign: |
 | JPEG (Joint Photographic Experts Group Image) | :heavy_minus_sign: |  :heavy_minus_sign: |  :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: |
 | PNG (Portable Graphics Format Image) | :heavy_minus_sign: |  :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: |
@@ -39,7 +39,7 @@ See the following blog posts for more information and getting started guides:
 | PPTX (Microsoft PowerPoint) | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: |
 | ODP (OpenDocument Presentation) | :heavy_minus_sign: | :heavy_minus_sign: |  :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: |
 
-`**` *See __[TSDynamicUrls for Google Forms]()__ for more information on sharing Google Forms*
+`*` *See __[TSDynamicUrls for Google Forms]()__ for more information on sharing Google Forms*
 
 <br>
 
