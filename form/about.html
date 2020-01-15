@@ -1,0 +1,49 @@
+<!-- 
+* Copyright Laura Taylor
+* (https://github.com/techstreams/TSDynamicUrls)
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <style>[v-cloak] {display: none} p.ts-small {font-size: 9px;}</style>
+  </head>
+  <body>
+    <div id="app">
+      <v-app v-cloak>     
+          <v-card outlined raised class="mx-auto mb-4">       
+            <v-img
+                    class="white--text"
+                    height="220px"
+                    src="https://techstreams.github.io/ui-examples/img/publicdomainpictures-paperclips-2092_640.jpg">
+              <v-card-title class="mt-5 align-end fill-height indigo--text">TSDynamicUrls</v-card-title>
+            </v-img>            
+            <v-card-text>
+              <p class="text-center ts-small">Image by <a href="https://pixabay.com/users/PublicDomainPictures-14/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2092" target="_blank">PublicDomainPictures</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2092" target="_blank">Pixabay</a></p>
+              <p class="text-center subtitle-2">Dynamic URLs for Google Docs, Sheets, Slides, Drawings &amp; Forms</p>
+            </v-card-text>     
+            <v-divider></v-divider>
+            <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn text color="primary" href="https://github.com/techstreams/TSDynamicUrls" target="_blank">Documentation</v-btn>
+                <v-btn text color="primary" href="https://www.tech-streams.com" target="_blank">Developer</v-btn>   
+                <v-spacer></v-spacer>
+            </v-card-actions>
+          </v-card>            
+          <v-footer app></v-footer>      
+      </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        vuetify: new Vuetify()
+      });
+    </script>
+  </body>
+</html>
