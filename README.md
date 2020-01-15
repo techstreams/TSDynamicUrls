@@ -5,17 +5,17 @@
 See the following blog posts for more information and getting started guides:
 
 * **[Introduction to the URL power of Google documents](https://medium.com/@techstreams/google-document-urls-as-simple-machines-400baca6d014)**
-* **[TSDynamicUrls for Google Forms]()** - *[Code](/form/)*
+* **[TSDynamicUrls Google Form]()** - *[Code](/form/)*
 
-**TSDynamicUrls** is intended for internal use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
+**TSDynamicUrls** is intended for use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
 
 ---
 
-**TSDynamicUrls** supports the Google document files types/formats and Google Sheets PDF options as outlined in the tables below.
+**TSDynamicUrls** supports the Google document files types/formats and Google Sheets PDF options outlined in the tables below.
 
 **Supported Google document file types & formats:**
 
-`*` *See __[TSDynamicUrls for Google Forms]()__ for more information on sharing Google Forms.*
+`*` *See __[TSDynamicUrls Google Form]()__ for more information on sharing Google Forms.*
 
 | FORMAT | DOCS | SHEETS | SLIDES | DRAWINGS | FORMS|
 | ---- | :--: | :----: | :----: | :---: | :------: |
