@@ -5,7 +5,7 @@
 See the following blog posts for more information and getting started guides:
 
 * **[Introduction to the URL power of Google documents](https://medium.com/@techstreams/google-document-urls-as-simple-machines-400baca6d014)**
-* **[TSDynamicUrls for Google Forms]()**
+* **[TSDynamicUrls for Google Forms]()** - *[Code](/form/)*
 
 **TSDynamicUrls** is intended for internal use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
 
