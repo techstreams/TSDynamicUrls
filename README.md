@@ -13,9 +13,7 @@ See the following blog posts for more information and getting started guides:
 
 **TSDynamicUrls** supports the Google document files types/formats and Google Sheets PDF options outlined in the tables below.
 
-**Supported Google document file types & formats:**
-
-`*` *See below for more on sharing Google Forms.*
+**Supported Google Document File Types & Formats** - *See below for more on sharing Google Forms.*
 
 | FORMAT | DOCS | SHEETS | SLIDES | DRAWINGS | FORMS|
 | ---- | :--: | :----: | :----: | :---: | :------: |
@@ -44,7 +42,7 @@ See the following blog posts for more information and getting started guides:
 
 <br>
 
-**Supported Google Sheets PDF options:**
+**Supported Google Sheets PDF Options**
 
 | GOOGLE SHEETS PDF OPTIONS |  |
 | ---- | :--: | 
