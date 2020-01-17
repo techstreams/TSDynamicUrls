@@ -7,9 +7,13 @@ See the following blog posts for more information and getting started guides:
 * **[Introduction to the URL power of Google documents](https://medium.com/@techstreams/google-document-urls-as-simple-machines-400baca6d014)**
 * **[TSDynamicUrls Google Form]()** - *[Code](/form/)*
 
-**TSDynamicUrls** is intended for use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
+*__TSDynamicUrls__ is intended for use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.*
+
+<br>
 
 ---
+
+## Supported Formats & Options
 
 **TSDynamicUrls** supports the Google document files types/formats and Google Sheets PDF options outlined in the tables below.
 
