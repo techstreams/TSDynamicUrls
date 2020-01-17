@@ -15,7 +15,7 @@ See the following blog posts for more information and getting started guides:
 
 **Supported Google document file types & formats:**
 
-`*` *See __[TSDynamicUrls Google Form]()__ for more information on sharing Google Forms.*
+`*` *See below for more on sharing Google Forms.*
 
 | FORMAT | DOCS | SHEETS | SLIDES | DRAWINGS | FORMS|
 | ---- | :--: | :----: | :----: | :---: | :------: |
@@ -65,6 +65,36 @@ See the following blog posts for more information and getting started guides:
 | Named Range  (Single Sheet) | :heavy_check_mark: |
 | Custom Range  (Single Sheet) | :heavy_check_mark: |
 
+
+<br>
+
+---
+
+## Share Google Forms With View Only Access
+
+*See __[this guide](https://docs.google.com/document/d/1QQO9mTxiaCVItBo_ns26V1hH5PgFjKI7P-41jkPZEUk/preview)__ for more on sharing Google Forms.  Script below.*
+
+```
+function share() {
+ 
+    var formId = "<FORM FILE ID>";
+    var file = DriveApp.getFileById(formId);
+
+    file.setSharing(
+      DriveApp.Access.ANYONE_WITH_LINK, 
+      DriveApp.Permission.VIEW
+    );
+  
+}
+```
+
+| ACCESS LEVEL | DESCRIPTION |
+| :---------- | :--------- |
+| **ANYONE** | *Anyone on the Internet can find and access. No sign-in required.* |
+| **ANYONE_WITH_LINK** | *Anyone who has the link can access it. No sign-in required.* |
+| **DOMAIN** | *People in your G Suite domain can find and access it. Sign-in required.* |
+| **DOMAIN_WITH_LINK** | *People in your G Suite  domain who have the link can access it. Sign-in required.* |
+| **PRIVATE** | *Only people explicitly granted permission can access. Sign-in required.* |
 
 <br>
 
