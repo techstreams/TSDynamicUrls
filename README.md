@@ -7,15 +7,19 @@ See the following blog posts for more information and getting started guides:
 * **[Introduction to the URL power of Google documents](https://medium.com/@techstreams/google-document-urls-as-simple-machines-400baca6d014)**
 * **[TSDynamicUrls Google Form]()** - *[Code](/form/)*
 
-**TSDynamicUrls** is intended for use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
+*__TSDynamicUrls__ is intended for use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.*
+
+<br>
 
 ---
 
+## Supported Formats & Options
+
 **TSDynamicUrls** supports the Google document files types/formats and Google Sheets PDF options outlined in the tables below.
 
-**Supported Google document file types & formats:**
+<br>
 
-`*` *See __[TSDynamicUrls Google Form]()__ for more information on sharing Google Forms.*
+**Supported Google Document File Types & Formats** - *See below for more on sharing Google Forms.*
 
 | FORMAT | DOCS | SHEETS | SLIDES | DRAWINGS | FORMS|
 | ---- | :--: | :----: | :----: | :---: | :------: |
@@ -44,7 +48,7 @@ See the following blog posts for more information and getting started guides:
 
 <br>
 
-**Supported Google Sheets PDF options:**
+**Supported Google Sheets PDF Options**
 
 | GOOGLE SHEETS PDF OPTIONS |  |
 | ---- | :--: | 
@@ -65,6 +69,38 @@ See the following blog posts for more information and getting started guides:
 | Named Range  (Single Sheet) | :heavy_check_mark: |
 | Custom Range  (Single Sheet) | :heavy_check_mark: |
 
+
+<br>
+
+---
+
+## Share Google Forms With View Only Access
+
+*See __[this guide](https://techstreams.page.link/HowToShareForms)__ for more on sharing Google Forms.  Script below.*
+
+<br>
+
+```
+function share() {
+ 
+    var formId = "<FORM FILE ID>";
+    var file = DriveApp.getFileById(formId);
+
+    file.setSharing(
+      DriveApp.Access.ANYONE_WITH_LINK, 
+      DriveApp.Permission.VIEW
+    );
+  
+}
+```
+
+| ACCESS LEVEL | DESCRIPTION |
+| :---------- | :--------- |
+| **ANYONE** | *Anyone on the Internet can find and access. No sign-in required.* |
+| **ANYONE_WITH_LINK** | *Anyone who has the link can access it. No sign-in required.* |
+| **DOMAIN** | *People in your G Suite domain can find and access it. Sign-in required.* |
+| **DOMAIN_WITH_LINK** | *People in your G Suite  domain who have the link can access it. Sign-in required.* |
+| **PRIVATE** | *Only people explicitly granted permission can access. Sign-in required.* |
 
 <br>
 
