@@ -57,6 +57,7 @@ See the following blog posts for more information and getting started guides:
 | Size  (Letter, Tabloid, Legal, Statement, Executive, Folio, A3, A4, A5, B4, B5)  | :heavy_check_mark: |
 | Orientation (Portrait, Landscape) | :heavy_check_mark: |
 | Scale  (Normal 100%, Fit to Width, Fit to Height, Fit to Page) | :heavy_check_mark: |
+| Page Order  (Down, then over; Over, then down) | :heavy_check_mark: |
 | Horizontal Alignment  (Left, Center, Right) | :heavy_check_mark: |
 | Vertical Alignment  (Top, Middle, Bottom) | :heavy_check_mark: |
 | Repeat Frozen Rows | :heavy_check_mark: |
