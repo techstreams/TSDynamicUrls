@@ -21,7 +21,7 @@ See the following blog posts for more information and getting started guides:
 
 <br>
 
-**Supported Google Document File Types & Formats** - *`*`See below for more on sharing Google Forms.*
+**TSDynamicUrls Supported Google Document File Types & Formats** - *`*`See below for more on sharing Google Forms.*
 
 | FORMAT | DOCS | SHEETS | SLIDES | DRAWINGS | FORMS|
 | ---- | :--: | :----: | :----: | :---: | :------: |
@@ -50,7 +50,7 @@ See the following blog posts for more information and getting started guides:
 
 <br>
 
-**Supported Google Sheets PDF Options**
+**TSDynamicUrls Supported Google Sheets PDF Options**
 
 | GOOGLE SHEETS PDF OPTIONS |  |
 | ---- | :--: | 
