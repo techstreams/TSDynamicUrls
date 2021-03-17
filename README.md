@@ -1,5 +1,12 @@
 # TSDynamicUrls
 
+*If you enjoy my [Google Workspace Apps Script](https://developers.google.com/apps-script) work, please consider buying me a cup of coffee!* 
+
+
+[![](https://techstreams.github.io/images/bmac.svg)](https://www.buymeacoffee.com/techstreams)
+
+---
+
 **TSDynamicUrls** is an [Apps Script](https://www.google.com/script/start/) powered dynamic URL generator for ***Google Docs***, ***Sheets***, ***Slides***, ***Drawings*** & ***Forms*** which assists document creators and consumers in leveraging the ***URL power*** of Google documents. 💥
 
 See the following blog posts for more information and getting started guides:
