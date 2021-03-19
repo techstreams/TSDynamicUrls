@@ -71,6 +71,7 @@ var cases_ = function() {
         copy: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/copy',
         copycomments: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/copy?copyComments=true',
         template: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/template/preview',
+        mobilebasic: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/mobilebasic',
         pdf: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/export?format=pdf',
         rtf: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/export?format=rtf',
         txt: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/export?format=txt',
@@ -112,6 +113,13 @@ var cases_ = function() {
       response = responses[responses.length-1];
       tsdu = new TSDynamicUrls(form, response).convertUrl();
       equal(tsdu.getUrl(), docs.template, 'TSDynamicUrls successfully creates Docs Template URL');
+     
+       // Test Docs MobileBasic
+      TestUtil.createDocResponse(form, ['Docs', 'MobileBasic', docs.input]);
+      responses = form.getResponses();
+      response = responses[responses.length-1];
+      tsdu = new TSDynamicUrls(form, response).convertUrl();
+      equal(tsdu.getUrl(), docs.copy, 'TSDynamicUrls successfully creates Docs MobileBasic URL');
       
       // Test Docs PDF
       TestUtil.createDocResponse(form, ['Docs', 'PDF (Portable Document Format)', docs.input]);
