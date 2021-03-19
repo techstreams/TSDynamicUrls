@@ -155,7 +155,7 @@ To perform **TSDynamicUrls** for Google Forms unit tests:
 
 ## Change Log
 
-* 03/19/2021 - Added **/mobilebasic** option for Google Docs.  To test:
+* 2021-03-19 - Added **/mobilebasic** option for Google Docs.  To test:
   * Make a copy of this [Google Form](https://techstreams.page.link/TSDynamicUrlsForm).
   * Add a **MobileBasic** option to the **Google Docs URL Modification Type?** section.
   * Replace the [Code.gs](./form/Code.gs) in the copied form.
