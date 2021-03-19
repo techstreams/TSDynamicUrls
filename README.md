@@ -36,6 +36,7 @@ See the following blog posts for more information and getting started guides:
 | Copy |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: `*` |
 | Copy w/ Comments |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: | :heavy_minus_sign: |
 | Template |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: `*` |
+| MobileBasic |  :heavy_check_mark: |  :heavy_minus_sign: |  :heavy_minus_sign: |  :heavy_minus_sign: | :heavy_minus_sign: |
 | PDF (Portable Document Format) |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: |  :heavy_check_mark: | :heavy_minus_sign: |
 | JPEG (Joint Photographic Experts Group Image) | :heavy_minus_sign: |  :heavy_minus_sign: |  :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: |
 | PNG (Portable Graphics Format Image) | :heavy_minus_sign: |  :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: | :heavy_minus_sign: |
@@ -149,6 +150,15 @@ To perform **TSDynamicUrls** for Google Forms unit tests:
 * Set the desired unit test configuration entry in the `testConfig` object to `true` *(see each file for information on where to modify these values to enable tests)*.   NOTE: Some tests can take longer to run so best to run them individually.
 
 * Access the deployed web app for test results.
+
+---
+
+## Change Log
+
+* 03/19/2021 - Added **/mobilebasic** option for Google Docs.  To test:
+  * Make a copy of this [Google Form](https://techstreams.page.link/TSDynamicUrlsForm).
+  * Add a **MobileBasic** option to the **Google Docs URL Modification Type?** section.
+  * Replace the [Code.gs](./form/Code.gs) in the copied form.
 
 ---
 
