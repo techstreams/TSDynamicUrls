@@ -196,6 +196,17 @@ function processResponses(e) {
                 throw new Error('TSDynamicUrls.convertUrl(): Invalid document type.');        
             }     
             break;
+          // MobileBasic 'docs' type
+          case 'mobilebasic':
+            self.url = itemResponses.shift().getResponse();
+            switch (self.doct) {
+              case 'docs':
+                self.url = self.url.replace(self.getUrlSuffix_(),"/mobilebasic");
+                break;
+              default:
+                throw new Error('TSDynamicUrls.convertUrl(): Invalid document type.');        
+            }     
+            break;
           // PDF all doctypes except 'forms'
           case 'pdf':
             switch (self.doct) {
