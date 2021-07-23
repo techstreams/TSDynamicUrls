@@ -1,0 +1,418 @@
+<!-- 
+* Copyright Laura Taylor
+* (https://github.com/techstreams/TSDataTable)
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <style>   
+    .v-card { overflow-y: scroll; }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-content>
+        <v-container>
+          <template>
+            <h1 class="mb-4 display-1">TSDynamicUrl</h1>
+            <v-stepper v-model="current">
+            
+              <v-stepper-header>
+                <v-stepper-step :complete="current > 1" step="1">Document Type</v-stepper-step>
+                <v-divider></v-divider>
+                <v-stepper-step :complete="current > 2" step="2">Modification Type</v-stepper-step>
+                <v-divider></v-divider>
+                <v-stepper-step :complete="current > 3" step="3">Sheets PDF Options<small>Conditional</small></v-stepper-step>               
+                <v-divider></v-divider>
+                <v-stepper-step :complete="current > 4" step="4">Document URL</v-stepper-step>                
+                <v-divider></v-divider>
+                <v-stepper-step step="5">Generated URL</v-stepper-step>
+              </v-stepper-header>
+              
+              <v-stepper-items>
+                <v-stepper-content step="1">
+                  <v-card class="mb-12" color="grey lighten-4":height="height">               
+                    <v-card-title class="title">Select Google Document Type:</v-card-title>
+                    <v-container>
+                      <v-row>
+                        <v-col cols="12">
+                          <v-radio-group v-model="url.doctype" class="ml-12" @change="reset()">
+                            <v-radio v-for="n in doctypes" :key="n" :label="`${n}`" :value="n":color="color"></v-radio>
+                          </v-radio-group>
+                        </v-col>
+                      </v-row>
+                    </v-container>
+                  </v-card>
+
+                  <v-btn color="primary" @click="nextStep(1)">Continue</v-btn>
+                                               
+                </v-stepper-content>
+
+                <v-stepper-content step="2">
+                  <v-card class="mb-12" color="grey lighten-4" :height="height">
+                    <v-card-title class="title">Select Modification Type:</v-card-title>
+                    <v-container>
+                      <v-row>
+                        <v-col cols="6">
+                          <v-radio-group v-model="url.modtype" class="ml-12">
+                            <v-radio v-for="n in firstModtypes" :key="n" :label="`${n}`" :value="n" :color="color"></v-radio>
+                          </v-radio-group>
+                        </v-col>
+                        <v-col v-if="modtypes.length>6" cols="6">
+                          <v-radio-group v-model="url.modtype">
+                            <v-radio v-for="n in secondModtypes" :key="n" :label="`${n}`" :value="n" :color="color"></v-radio>
+                          </v-radio-group>
+                        </v-col>
+                      </v-row>
+                    </v-container>
+                  </v-card>
+                  <v-btn color="primary" @click="nextStep(2)">Continue</v-btn>
+                  <v-btn text @click="previousStep(2)">Back</v-btn>
+                </v-stepper-content>
+                
+                <v-stepper-content step="3">
+                  <v-card class="mb-12" color="grey lighten-4" :height="height">
+                    <v-card-title class="title">Select Sheets PDF Options:</v-card-title>
+                    <v-container fluid>
+                     <v-form ref="pdf" v-model="validpdf">
+                      <v-row>
+                        <v-col cols="4">
+                          <v-select v-model="url.pdf.papersize" :items="pdfoptions.papersize" label="Paper Size"></v-select>
+                        </v-col>
+                        <v-col cols="4">
+                           <v-select v-model="url.pdf.orientation" :items="pdfoptions.orientation" label="Orientation"></v-select>
+                        </v-col>
+                        <v-col cols="4">
+                           <v-select v-model="url.pdf.scale" :items="pdfoptions.scale" label="Scale"></v-select>
+                        </v-col>
+                      </v-row>
+                       <v-row>
+                        <v-col cols="4">
+                           <v-select v-model="url.pdf.horizontalalign" :items="pdfoptions.horizontalalign" label="Horizontal Alignment"></v-select>
+                        </v-col>
+                        <v-col cols="4">
+                           <v-select v-model="url.pdf.verticalalign" :items="pdfoptions.verticalalign" label="Vertical Alignment"></v-select>
+                        </v-col>
+                        <v-col cols="4">
+                           <v-select v-model="url.pdf.pageorder" :items="pdfoptions.pageorder" label="Page Order"></v-select>
+                        </v-col>
+                      </v-row>               
+                      <v-row>
+                        <v-col cols="3">
+                          <v-checkbox v-model="url.pdf.frozenrows" label="Repeat Frozen Rows" :color="color"></v-checkbox>
+                          <v-checkbox v-model="url.pdf.title" label="Show Title" :color="color"></v-checkbox>                       
+                        </v-col>
+                        <v-col cols="3">
+                         <v-checkbox v-model="url.pdf.frozencolumns" label="Repeat Frozen Columns" :color="color"></v-checkbox>
+                         <v-checkbox v-model="url.pdf.notes" label="Show Notes" :color="color"></v-checkbox>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-checkbox v-model="url.pdf.gridlines" label="Show Gridlines" :color="color"></v-checkbox>
+                          <v-checkbox v-model="url.pdf.pagenumbers" label="Show Page Numbers" :color="color"></v-checkbox>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-checkbox v-model="url.pdf.sheetnames" label="Show Sheet Names" :color="color"></v-checkbox>
+                          <v-checkbox v-model="url.pdf.custommargins" label="Custom Margins" :color="color"></v-checkbox> 
+                        </v-col>
+                      </v-row>
+                      <v-row v-show="url.pdf.custommargins">
+                        <v-col cols="3">
+                          <v-text-field v-model="url.pdf.margin.top" label="Custom Top Margin" :rules="[validMargin]"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-text-field v-model="url.pdf.margin.bottom" label="Custom Bottom Margin" :rules="[validMargin]"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-text-field v-model="url.pdf.margin.left" label="Custom Left Margin" :rules="[validMargin]"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-text-field v-model="url.pdf.margin.right" label="Custom Right Margin" :rules="[validMargin]"></v-text-field>                      
+                        </v-col>
+                      </v-row>
+                      <v-row>
+                        <v-col cols="3">
+                          <v-select v-model="url.pdf.sheets" :items="pdfoptions.sheets" label="Include Sheets?"></v-select>
+                        </v-col>
+                        <v-col cols="3">
+                           <v-select v-show="isSpecificSheet" v-model="url.pdf.range" :items="pdfoptions.range" label="Include Range?"></v-select>
+                        </v-col>
+                        <v-col cols="3">
+                           <v-select v-show="isSpecificRange" v-model="url.pdf.rangetype" :items="pdfoptions.rangetype" label="Range Type?"></v-select>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-text-field v-if="isNamedRange" v-model="url.pdf.namedrange" label="Named Range" :rules="[validNamedRange]"></v-text-field>                      
+                        </v-col>
+                      </v-row>
+                      <v-row v-show="isCustomRange">
+                        <v-col cols="3">
+                          <v-text-field v-model="url.pdf.customrange.startrow" label="Custom Range Start Row" :rules="[validCustomRangeStart]"></v-text-field>
+                        </v-col>
+                         <v-col cols="3">
+                          <v-text-field v-model="url.pdf.customrange.startcolumn" label="Custom Range Start Column" :rules="[validCustomRangeStart]"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-text-field v-model="url.pdf.customrange.endrow" label="Custom Range End Row" :rules="[validCustomRangeEndRow]" ></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-text-field v-model="url.pdf.customrange.endcolumn" label="Custom Range End Column" :rules="[validCustomRangeEndColumn]"></v-text-field>                      
+                        </v-col>
+                      </v-row>
+                    </v-form>
+                    </v-container>
+                  </v-card>
+                  <v-btn :disabled="!validpdf" color="primary" @click="nextStep(3)">Continue</v-btn>
+                  <v-btn v-show="current > 1" text @click="previousStep(3)">Back</v-btn>
+                </v-stepper-content>
+
+                <v-stepper-content step="4">
+                  <v-card class="mb-12" color="grey lighten-4" :height="height">
+                    <v-card-title class="title">Enter Google Document URL:</v-card-title>
+                    <v-container>
+                      <v-row>
+                        <v-col cols="12">
+                          <v-form ref="url" v-model="validurl">
+                            <v-text-field v-model="url.docurl" label="Google Document URL" :placeholder="placeholder" :rules="[rules.required, validUrl]" :color="color" class="pl-12 pr-12"></v-text-field>
+                          </v-form>
+                        </v-col>
+                      </v-row>
+                    </v-container>
+                  </v-card>
+
+                  <v-btn :disabled="!validurl" color="primary" @click="nextStep(4)">Continue</v-btn>
+                  <v-btn v-show="current > 1" text @click="previousStep(4)">Back</v-btn>
+                </v-stepper-content>
+                <v-stepper-content step="5">
+                  <v-card class="mb-12" color="grey lighten-4" :height="height">
+                    <v-card-title class="title">Generated URL:</v-card-title>
+                    <v-container>
+                      <v-row>
+                        <v-col cols="10">
+                            <v-text-field ref="generatedurl" v-model="url.generatedurl" label="Generating URL" solo readonly :loading="url.loading" :color="color"></v-text-field>
+                        </v-col>
+                        <v-col cols="2">
+                            <v-btn :color="color" outlined :loading="url.loading" height="48" @click="copyUrl()"><v-icon>{{icon}}</v-icon></v-btn>
+                        </v-col>
+                      </v-row>
+                    </v-container>
+                  </v-card>
+                  <v-btn color="primary" :disabled = "url.loading" @click="nextStep(5)">New</v-btn>
+                  <v-btn v-show="current > 1" text :disabled = "url.loading" @click="previousStep(5)">Back</v-btn>
+                </v-stepper-content>
+              </v-stepper-items>
+            </v-stepper>
+          </template>
+        </v-container>
+      </v-content>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: function() {
+        return {
+          current: 1,
+          height: 350,
+          color: '#1976d2',
+          icon: 'mdi-content-copy',
+          placeholder: "e.g. https://docs.google.com/spreadsheets/d/11111VsqMr42222hhZYM-3333GXA_W60DhdqvO7DcFUmY/edit",
+          url: {
+            doctype: "Docs",
+            modtype: "Preview",
+            docurl: "",
+            loading: true,
+            generatedurl: "",
+            pdf: <?!= JSON.stringify(config.pdf) ?>,
+          },
+          doctypes: <?!= JSON.stringify(config.doctypes) ?>,
+          modtypes: [],
+          allmodtypes: <?!= JSON.stringify(config.allmodtypes) ?>,
+          pdfoptions: <?!= JSON.stringify(config.pdfoptions) ?>,
+          rules: {
+           required: value => !!value || 'Required.'
+          },
+          validurl: false,
+          validpdf: false
+        }
+      },
+      methods: {
+        nextStep (step) {
+          const self = this;
+          switch(step) {
+            case 1:
+              self.modtypes = self.allmodtypes[self.url.doctype.toLowerCase()];
+              self.current = 2;
+              break;
+            case 2:
+              self.current = self.url.doctype === "Sheets" && self.url.modtype.indexOf("PDF") >= 0 ? 3 : 4;
+              break;
+            case 3:
+              self.$refs.pdf.validate();
+              if (self.validpdf) {
+                self.current = 4;
+              }
+              break;
+             case 4:
+               self.$refs.url.validate();
+                if (self.validurl) {
+                  self.url.loading = true;
+                  self.current = 5;
+                  google.script.run
+                        .withSuccessHandler(resp => {
+                          self.url.loading = false;
+                          self.url.generatedurl = resp;
+                        })
+                        .withFailureHandler(err => {
+                          console.log(err);
+                        })
+                       .generateUrl(self.url);
+                }  
+                break;
+            case 5:
+              self.url.doctype = "Docs";
+              self.url.modtype = "Preview";
+              self.url.pdf = self.pdfoptions.resets;
+              self.reset();
+              self.current = 1;
+              break;
+            default: 
+          }
+        },
+        previousStep (step) {
+          const self = this;
+          switch(step) {
+            case 2:
+            case 3:
+              self.current--;
+              break;
+             case 4:
+              self.current = self.url.doctype === "Sheets" && self.url.modtype.indexOf("PDF") >= 0 ? 3 : 2;
+              break;
+            case 5:
+              self.current -= 1;
+              break;
+           default: 
+          }
+        },
+        copyUrl () {
+          const self = this,
+                textToCopy = self.$refs.generatedurl.$el.querySelector('input');
+          textToCopy.select();
+          document.execCommand("copy");
+          self.color = 'success';
+          self.icon = 'mdi-check';
+          setTimeout(() => { 
+             self.color = '#1976d2';
+             self.icon = 'mdi-content-copy'
+          }, 4000);
+        },
+        reset () {
+          const self = this;
+          self.url.docurl = '';
+          self.$refs.url.reset();
+          self.url.generatedurl = '';
+        },
+        validCustomRangeStart (value) {
+          const self = this;
+          if (self.url.pdf.rangetype === "Custom Range") {
+             return (!!value && value > 0) || 'Value is required and must be greater than 0.';
+          }
+          return true;
+        },
+        validCustomRangeEndColumn (value) {
+          const self = this;
+          if (self.url.pdf.rangetype === "Custom Range") {
+             return (!!value && value >= self.url.pdf.customrange.startcolumn) || "Value is required and must be greater than or equal to 'custom range start column'";
+          }
+          return true;
+        },
+        validCustomRangeEndRow (value) {
+          const self = this;
+          if (self.url.pdf.rangetype === "Custom Range") {
+             return (!!value && value >= self.url.pdf.customrange.startrow) || "Value is required and must be greater than or equal to 'custom range start row'";
+          }
+          return true;
+        },
+        validMargin (value) {
+          const self = this;
+          if (self.url.pdf.custommargins) {
+             return (!!value && value >= 0) || 'Value is required and must be greater than or equal to 0.';
+          }
+          return true;
+        },
+        validNamedRange (value) {
+          const self = this;
+          if (self.url.pdf.range === 'Specific Range' && self.url.pdf.rangetype === 'Named Range') {
+             return value.trim() !== '' || 'Value is required.';
+          }
+          return true;
+        },
+        validUrl (value) {
+          const self = this,
+              docPattern = /^(https:\/\/)?docs\.google\.com\/.*$/,
+              idPattern = /^(https:\/\/)?docs\.google\.com\/.*(slide=id\.|gid=).*$/;
+          if (self.needsId && self.url.doctype === "Sheets") {
+             return idPattern.test(value) || 'Invalid Google Document URL. Must include Sheet Id.';
+          } else if (self.needsId && self.url.doctype === "Slides") {
+             return idPattern.test(value) || 'Invalid Google Document URL. Must include Slide Id.';
+          } else {
+             return docPattern.test(value) || 'Invalid Google Document URL.';
+          }
+        }
+      },
+      computed: {
+        needsId () {
+          return (this.url.doctype === "Sheets" && (this.url.modtype.indexOf("PDF") >= 0 && this.url.pdf.include === "sheet"));
+        },
+        isCustomRange () {
+          return this.url.pdf.rangetype === 'Custom Range';
+        },
+        isNamedRange () {
+          return this.url.pdf.rangetype === 'Named Range' && this.url.pdf.range === 'Specific Range';
+        },
+        isSpecificRange () {
+          return this.url.pdf.range === 'Specific Range';
+        },
+        isSpecificSheet () {
+          return this.url.pdf.sheets === 'Specific Sheet';
+        },
+        firstModtypes () {
+          return this.modtypes.length > 6 ? this.modtypes.slice(0, 6) : this.modtypes.slice();
+        },
+        secondModtypes () {
+          return this.modtypes.slice(6);
+        }
+      }
+    })
+  </script>
+</body>
+</html>
+
+
