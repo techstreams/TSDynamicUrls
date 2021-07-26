@@ -16,7 +16,7 @@ See the following blog posts for more information and getting started guides:
 
 * **[TSDynamicUrls Google Form](https://medium.com/@techstreams/tsdynamicurls-1-leverage-the-url-power-of-google-docs-sheets-slides-drawings-forms-598b5dd53c98)**   *([Code](/form/))*
 
-* **[TSCreateUrlCheatsheet - Google Sheets Macro](https://techstreams.medium.com/tsdynamicurls-2-leverage-the-power-of-google-workspace-new-resource-urls-6b1da5ff49a7)**
+* **[TSCreateUrlCheatsheet - Google Sheets Macro](https://techstreams.medium.com/tsdynamicurls-2-leverage-the-power-of-google-workspace-new-resource-urls-6b1da5ff49a7)**  *([Code](/macro/))*
 
 *__TSDynamicUrls__ is intended for use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.*
 
