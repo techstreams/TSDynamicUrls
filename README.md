@@ -18,6 +18,8 @@ See the following blog posts for more information and getting started guides:
 
 * **[TSCreateUrlCheatsheet - Google Sheets Macro](https://techstreams.medium.com/tsdynamicurls-2-leverage-the-power-of-google-workspace-new-resource-urls-6b1da5ff49a7)**  *([Code](/macro/))*
 
+* **[TSDynamicUrls Web App](https://techstreams.medium.com/tsdynamicurls-3-leverage-the-url-power-of-google-docs-sheets-slides-drawings-forms-22ab381de9d7)** *([Code](/webapp/))*
+
 *__TSDynamicUrls__ is intended for use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.*
 
 <br>
