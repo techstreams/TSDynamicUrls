@@ -91,7 +91,7 @@ See the following blog posts for more information and getting started guides:
 
 ## Share Google Forms With View Only Access
 
-*See __[this guide](https://techstreams.page.link/HowToShareForms)__ for more on sharing Google Forms.  Script below.*
+*See __[this guide](https://docs.google.com/document/d/1kLo2kw5aBF7RYL_OV9kOxF7JkMjnTBfcuPbFsYUR-TM/template/preview)__ for more on sharing Google Forms.  Script below.*
 
 <br>
 
