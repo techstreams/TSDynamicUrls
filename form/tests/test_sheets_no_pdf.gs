@@ -65,19 +65,19 @@ var cases_ = function() {
           form = FormApp.getActiveForm(),
           responses, response;
       var sheets = {
-        input: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/edit?usp=sharing',
-        idinput: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/edit#gid=929929678',
-        preview: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/preview',
-        copy: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/copy',
-        copycomments: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/copy?copyComments=true',
-        template: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/template/preview',
-        html: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/export?format=zip',
-        xlsx: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/export?format=xlsx',
-        ods: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/export?format=ods',
-        csvnoid: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/export?format=csv&gid=0',
-        csvid: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/export?format=csv&gid=929929678',
-        tsvnoid: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/export?format=tsv&gid=0',
-        tsvid: 'https://docs.google.com/spreadsheets/d/1TxINLwjEkB8QnsaGgKpzvV_VjtFYHVmhPqdB5hFjC3E/export?format=tsv&gid=929929678'
+        input: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/edit?usp=sharing',
+        idinput: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/edit#gid=929929678',
+        preview: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/preview',
+        copy: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/copy',
+        copycomments: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/copy?copyComments=true',
+        template: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/template/preview',
+        html: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/export?format=zip',
+        xlsx: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/export?format=xlsx',
+        ods: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/export?format=ods',
+        csvnoid: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/export?format=csv&gid=0',
+        csvid: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/export?format=csv&gid=929929678',
+        tsvnoid: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/export?format=tsv&gid=0',
+        tsvid: 'https://docs.google.com/spreadsheets/d/1VwLdHIZHxE8kKBZ72e1LEwrlm2WtI9kgar6Z1iSPtW4/export?format=tsv&gid=929929678'
       };
       
       // Temporarily Disable form submit trigger for testing
