@@ -66,19 +66,19 @@ var cases_ = function() {
           form = FormApp.getActiveForm(),
           responses, response;
       var docs =  {
-        input: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/edit',
-        preview: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/preview',
-        copy: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/copy',
-        copycomments: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/copy?copyComments=true',
-        template: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/template/preview',
-        mobilebasic: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/mobilebasic',
-        pdf: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/export?format=pdf',
-        rtf: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/export?format=rtf',
-        txt: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/export?format=txt',
-        html: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/export?format=zip',
-        docx: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/export?format=docx',
-        odt: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/export?format=odt',
-        epub: 'https://docs.google.com/document/d/1wtrYEY4vgVTMhnuBtYGebJqlIRD4eNTpWwk8fixnkFE/export?format=epub'
+        input: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/edit',
+        preview: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/preview',
+        copy: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/copy',
+        copycomments: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/copy?copyComments=true',
+        template: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/template/preview',
+        mobilebasic: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/mobilebasic',
+        pdf: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/export?format=pdf',
+        rtf: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/export?format=rtf',
+        txt: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/export?format=txt',
+        html: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/export?format=zip',
+        docx: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/export?format=docx',
+        odt: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/export?format=odt',
+        epub: 'https://docs.google.com/document/d/1FjdJJsbErVHAlG-w91w0VQIW8tYnMMpw-n8NqjYcIeY/export?format=epub'
       };
 
       // Remove All Existing Submit Triggers
