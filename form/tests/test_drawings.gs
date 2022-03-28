@@ -65,15 +65,15 @@ var cases_ = function() {
           form = FormApp.getActiveForm(),
           responses, response;
       var drawings = {
-        input: 'https://docs.google.com/drawings/d/1vXN6jpcgwGCfm0ijkKPanjnlSF7RN6jOWQIiNWVI3VA/edit?usp=sharing',
-        preview: 'https://docs.google.com/drawings/d/1vXN6jpcgwGCfm0ijkKPanjnlSF7RN6jOWQIiNWVI3VA/preview',
-        copy: 'https://docs.google.com/drawings/d/1vXN6jpcgwGCfm0ijkKPanjnlSF7RN6jOWQIiNWVI3VA/copy',
-        copycomments: 'https://docs.google.com/drawings/d/1vXN6jpcgwGCfm0ijkKPanjnlSF7RN6jOWQIiNWVI3VA/copy?copyComments=true',
-        template: 'https://docs.google.com/drawings/d/1vXN6jpcgwGCfm0ijkKPanjnlSF7RN6jOWQIiNWVI3VA/template/preview',
-        pdf: 'https://docs.google.com/drawings/d/1vXN6jpcgwGCfm0ijkKPanjnlSF7RN6jOWQIiNWVI3VA/export/pdf',
-        png: 'https://docs.google.com/drawings/d/1vXN6jpcgwGCfm0ijkKPanjnlSF7RN6jOWQIiNWVI3VA/export/png',
-        jpeg: 'https://docs.google.com/drawings/d/1vXN6jpcgwGCfm0ijkKPanjnlSF7RN6jOWQIiNWVI3VA/export/jpeg',
-        svg: 'https://docs.google.com/drawings/d/1vXN6jpcgwGCfm0ijkKPanjnlSF7RN6jOWQIiNWVI3VA/export/svg'
+        input: 'https://docs.google.com/drawings/d/1dI2fQpSAGxyk3flCYEPUqkUp7UILKfK-fCR3mRvg9Bc/edit?usp=sharing',
+        preview: 'https://docs.google.com/drawings/d/1dI2fQpSAGxyk3flCYEPUqkUp7UILKfK-fCR3mRvg9Bc/preview',
+        copy: 'https://docs.google.com/drawings/d/1dI2fQpSAGxyk3flCYEPUqkUp7UILKfK-fCR3mRvg9Bc/copy',
+        copycomments: 'https://docs.google.com/drawings/d/1dI2fQpSAGxyk3flCYEPUqkUp7UILKfK-fCR3mRvg9Bc/copy?copyComments=true',
+        template: 'https://docs.google.com/drawings/d/1dI2fQpSAGxyk3flCYEPUqkUp7UILKfK-fCR3mRvg9Bc/template/preview',
+        pdf: 'https://docs.google.com/drawings/d/1dI2fQpSAGxyk3flCYEPUqkUp7UILKfK-fCR3mRvg9Bc/export/pdf',
+        png: 'https://docs.google.com/drawings/d/1dI2fQpSAGxyk3flCYEPUqkUp7UILKfK-fCR3mRvg9Bc/export/png',
+        jpeg: 'https://docs.google.com/drawings/d/1dI2fQpSAGxyk3flCYEPUqkUp7UILKfK-fCR3mRvg9Bc/export/jpeg',
+        svg: 'https://docs.google.com/drawings/d/1dI2fQpSAGxyk3flCYEPUqkUp7UILKfK-fCR3mRvg9Bc/export/svg'
       };
       
       // Temporarily Disable form submit trigger for testing
