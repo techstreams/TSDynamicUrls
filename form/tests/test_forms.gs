@@ -66,10 +66,10 @@ var cases_ = function() {
           form = FormApp.getActiveForm(),
           responses, response;
       var forms = {
-        input: 'https://docs.google.com/forms/d/1tGxxTfmC4-q7HLs60O4RoddGhwU_JlGgTilPLmXGJ5w/edit',
-        preview: 'https://docs.google.com/forms/d/1tGxxTfmC4-q7HLs60O4RoddGhwU_JlGgTilPLmXGJ5w/viewform',
-        copy: 'https://docs.google.com/forms/d/1tGxxTfmC4-q7HLs60O4RoddGhwU_JlGgTilPLmXGJ5w/copy',
-        template: 'https://docs.google.com/forms/d/1tGxxTfmC4-q7HLs60O4RoddGhwU_JlGgTilPLmXGJ5w/template/preview'
+        input: 'https://docs.google.com/forms/d/11QGIlpgaq4JHO-iQofNEoGVoV37JZ7cMwhye7kpicHk/edit',
+        preview: 'https://docs.google.com/forms/d/11QGIlpgaq4JHO-iQofNEoGVoV37JZ7cMwhye7kpicHk/viewform',
+        copy: 'https://docs.google.com/forms/d/11QGIlpgaq4JHO-iQofNEoGVoV37JZ7cMwhye7kpicHk/copy',
+        template: 'https://docs.google.com/forms/d/11QGIlpgaq4JHO-iQofNEoGVoV37JZ7cMwhye7kpicHk/template/preview'
       };
       
       // Temporarily Disable form submit trigger for testing
