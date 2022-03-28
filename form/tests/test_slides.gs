@@ -66,18 +66,18 @@ var cases_ = function() {
           form = FormApp.getActiveForm(),
           responses, response;
       var slides = {
-        input: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/edit?usp=sharing',
-        pnginput: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/edit#slide=id.gc6fa3c898_0_5',
-        preview: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/preview',
-        copy: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/copy',
-        copycomments: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/copy?copyComments=true',
-        template: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/template/preview',
-        pdf: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/export/pdf',    
-        pngnoid: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/export/png',
-        pngid: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/export/png?id=1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo&pageid=gc6fa3c898_0_5',
-        txt: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/export/txt',
-        pptx: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/export/pptx',
-        odp: 'https://docs.google.com/presentation/d/1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo/export/odp'
+        input: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/edit?usp=sharing',
+        pnginput: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/edit#slide=id.gc6fa3c898_0_5',
+        preview: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/preview',
+        copy: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/copy',
+        copycomments: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/copy?copyComments=true',
+        template: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/template/preview',
+        pdf: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/export/pdf',    
+        pngnoid: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/export/png',
+        pngid: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/export/png?id=1S5pu1SC1VmhDYxJppLVFTCBqaLftiedCKKk43yYpHgo&pageid=gc6fa3c898_0_5',
+        txt: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/export/txt',
+        pptx: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/export/pptx',
+        odp: 'https://docs.google.com/presentation/d/1qSQmpdV-YtYy4U4RUI1iutqrzlf1_PVBYO9oiO-b5QI/export/odp'
       };
       
       // Temporarily Disable form submit trigger for testing
